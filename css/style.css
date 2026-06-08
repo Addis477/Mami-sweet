@@ -1,7 +1,7 @@
 /* ============================================
    MAMI SWEETS - COMPLETE PREMIUM STYLESHEET
-   Warm Chocolate Colors | Luxury Sweets Theme
-   SWEETS MOMENT made luxurious
+   SWEETS MOMENT made luxurious | Warm Chocolate Theme
+   Includes: Brighter Hero Overlays | WhatsApp Button | Gift Card | Cart | Responsive
    ============================================ */
 
 :root {
@@ -113,6 +113,40 @@ body {
     0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
     70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
     100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* ========== HERO OVERLAYS ========== */
+/* Brighter overlay (25% dark) - for better text visibility */
+.hero-overlay-brighter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+/* Warm overlay (darker gradient) - for other pages */
+.hero-overlay-warm {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(62,31,13,0.7), rgba(107,58,42,0.6));
+    z-index: 1;
+}
+
+/* Light overlay */
+.hero-overlay-light {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
 }
 
 /* ========== GIFT CARD SECTION ========== */
@@ -488,16 +522,6 @@ body {
     background-size: cover;
     background-position: center;
     z-index: 0;
-}
-
-.hero-overlay-warm {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(62,31,13,0.7), rgba(107,58,42,0.6));
-    z-index: 1;
 }
 
 .hero-content {
@@ -933,6 +957,11 @@ body {
     gap: 12px;
 }
 
+.item-name {
+    flex: 1;
+    min-width: 120px;
+}
+
 .cart-controls {
     display: flex;
     align-items: center;
@@ -1025,6 +1054,13 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+.checkout-form input:focus,
+.checkout-form select:focus,
+.checkout-form textarea:focus {
+    outline: none;
+    border-color: #C47A4A;
+}
+
 .form-row-small {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1045,6 +1081,10 @@ body {
     justify-content: space-between;
     align-items: center;
     border: 1px solid #E8DCCC;
+}
+
+.shop-item span:first-child {
+    font-weight: 500;
 }
 
 .add-to-cart-btn {
@@ -1486,5 +1526,18 @@ button:hover {
     .gift-amount span {
         padding: 6px 14px;
         font-size: 0.8rem;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .item-total-price {
+        text-align: left;
+    }
+
+    .cart-controls {
+        align-self: flex-start;
     }
 }
