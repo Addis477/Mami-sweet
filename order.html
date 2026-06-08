@@ -68,7 +68,7 @@
 
 <!-- Main Content -->
 <main>
-    <!-- Hero Section with DIFFERENT Image from your repository - Brighter Overlay -->
+    <!-- Hero Section -->
     <section class="hero" data-aos="fade-up">
         <div class="hero-bg" style="background-image: url('https://raw.githubusercontent.com/Addis477/Mami-sweet/2ad40d989db79b70dbbe5d5258f4e369045bbec9/istockphoto-869077006-612x612.jpg');"></div>
         <div class="hero-overlay-brighter"></div>
@@ -251,7 +251,18 @@
         cart.forEach((item, idx) => {
             const itemTotal = item.price * item.qty;
             total += itemTotal;
-            html += `<div class="cart-item"><span class="item-name"><strong>${escapeHtml(item.name)}</strong></span><div class="cart-controls"><button class="qty-btn" onclick="changeQty(${idx}, -1)">−</button><span class="item-qty">${item.qty}</span><button class="qty-btn" onclick="changeQty(${idx}, 1)">+</button><button class="remove-btn" onclick="removeItem(${idx})">🗑️</button></div><span class="item-total-price">ETB ${itemTotal}</span></div>`;
+            html += `
+                <div class="cart-item">
+                    <span class="item-name"><strong>${escapeHtml(item.name)}</strong></span>
+                    <div class="cart-controls">
+                        <button class="qty-btn" onclick="changeQty(${idx}, -1)">−</button>
+                        <span class="item-qty">${item.qty}</span>
+                        <button class="qty-btn" onclick="changeQty(${idx}, 1)">+</button>
+                        <button class="remove-btn" onclick="removeItem(${idx})">🗑️</button>
+                    </div>
+                    <span class="item-total-price">ETB ${itemTotal}</span>
+                </div>
+            `;
         });
         cartDiv.innerHTML = html;
         if (totalSpan) totalSpan.textContent = `ETB ${total}`;
