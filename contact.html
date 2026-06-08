@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Contact MAMI SWEETS - Premium luxury sweets in Addis Ababa, Ethiopia. SWEETS MOMENT made luxurious.">
+    <meta name="theme-color" content="#3E1F0D">
     <title>Contact | MAMI SWEETS | SWEETS MOMENT made luxurious</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -13,10 +15,19 @@
 <body>
 
 <div class="page-transition"></div>
-<a href="https://wa.me/251908035130" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i><span class="whatsapp-tooltip">Order on WhatsApp</span></a>
 
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/251908035130?text=Hello%20MAMI%20SWEETS%2C%20I%20would%20like%20to%20place%20an%20order%20%F0%9F%8D%AB" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Order on WhatsApp</span>
+</a>
+
+<!-- Mobile Sidebar -->
 <div class="mobile-sidebar" id="mobileSidebar">
-    <div class="sidebar-header"><h3>🍫 MAMI SWEETS</h3><button class="close-sidebar" id="closeSidebarBtn"><i class="fas fa-times"></i></button></div>
+    <div class="sidebar-header">
+        <h3>🍫 MAMI SWEETS</h3>
+        <button class="close-sidebar" id="closeSidebarBtn"><i class="fas fa-times"></i></button>
+    </div>
     <div class="sidebar-nav">
         <a href="index.html"><i class="fas fa-home"></i> Home</a>
         <a href="about.html"><i class="fas fa-heart"></i> About</a>
@@ -25,14 +36,26 @@
         <a href="contact.html" class="active"><i class="fas fa-map-pin"></i> Contact</a>
     </div>
     <a href="order.html" class="sidebar-order-btn"><i class="fas fa-shopping-cart"></i> ORDER NOW</a>
-    <div class="sidebar-footer"><p><i class="fas fa-phone"></i> +251 908 035 130</p><p><i class="fab fa-instagram"></i> @mami_sweet2</p></div>
+    <div class="sidebar-footer">
+        <p><i class="fas fa-phone-alt"></i> +251 908 035 130</p>
+        <p><i class="fas fa-envelope"></i> mami@sweets.com</p>
+        <p><i class="fas fa-location-dot"></i> Addis Ababa, Ethiopia</p>
+        <p><i class="fab fa-instagram"></i> @mami_sweet2</p>
+        <p><i class="fab fa-tiktok"></i> @mami_sweet2</p>
+    </div>
 </div>
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
+<!-- Header -->
 <header class="main-header">
     <div class="container">
         <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
-        <div class="logo"><a href="index.html"><h1>🍫 MAMI SWEETS</h1><span>SWEETS MOMENT made luxurious</span></a></div>
+        <div class="logo">
+            <a href="index.html">
+                <h1>🍫 MAMI SWEETS</h1>
+                <span>SWEETS MOMENT made luxurious</span>
+            </a>
+        </div>
         <nav class="desktop-nav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -44,22 +67,49 @@
     </div>
 </header>
 
+<!-- Main Content -->
 <main>
-    <section class="hero">
-        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1587314156026-5df6b3fa0a5b?w=1920&h=800&fit=crop');"></div>
-        <div class="hero-overlay-warm"></div>
-        <div class="container hero-content"><h1>Get in Touch</h1><p>We'd love to hear from you</p></div>
+    <!-- Hero Section with YOUR Image - Brighter Overlay -->
+    <section class="hero" data-aos="fade-up">
+        <div class="hero-bg" style="background-image: url('https://raw.githubusercontent.com/Addis477/Mami-sweet/2ad40d989db79b70dbbe5d5258f4e369045bbec9/istockphoto-109153834-612x612.jpg');"></div>
+        <div class="hero-overlay-brighter"></div>
+        <div class="container hero-content">
+            <h1>Get in Touch</h1>
+            <p>We'd love to hear from you</p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="hero-btn">Shop Now →</a>
+            </div>
+        </div>
     </section>
 
-    <section class="contact-section">
+    <!-- Contact Section -->
+    <section class="contact-section" data-aos="fade-up">
         <div class="container">
+            <!-- Contact Cards -->
             <div class="contact-cards">
-                <div class="contact-card"><div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div><h3>Visit Us</h3><p>Addis Ababa, Ethiopia</p></div>
-                <div class="contact-card"><div class="icon-circle"><i class="fas fa-phone-alt"></i></div><h3>Call Us</h3><p>+251 908 035 130</p></div>
-                <div class="contact-card"><div class="icon-circle"><i class="fas fa-envelope"></i></div><h3>Email Us</h3><p>mami@sweets.com</p></div>
-                <div class="contact-card"><div class="icon-circle"><i class="fab fa-instagram"></i></div><h3>Instagram</h3><p>@mami_sweet2</p></div>
+                <div class="contact-card">
+                    <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Visit Us</h3>
+                    <p>Addis Ababa, Ethiopia</p>
+                </div>
+                <div class="contact-card">
+                    <div class="icon-circle"><i class="fas fa-phone-alt"></i></div>
+                    <h3>Call Us</h3>
+                    <p>+251 908 035 130</p>
+                </div>
+                <div class="contact-card">
+                    <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                    <h3>Email Us</h3>
+                    <p>mami@sweets.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="icon-circle"><i class="fab fa-instagram"></i></div>
+                    <h3>Instagram</h3>
+                    <p>@mami_sweet2</p>
+                </div>
             </div>
 
+            <!-- Social Icons -->
             <div class="social-icons">
                 <a href="#" class="social-link ig"><i class="fab fa-instagram"></i></a>
                 <a href="#" class="social-link tt"><i class="fab fa-tiktok"></i></a>
@@ -67,8 +117,10 @@
                 <a href="#" class="social-link tg"><i class="fab fa-telegram-plane"></i></a>
             </div>
 
+            <!-- Google Map -->
             <div id="map"></div>
 
+            <!-- Contact Form -->
             <div class="contact-form">
                 <h3>Send us a Message</h3>
                 <div class="form-row">
@@ -82,21 +134,94 @@
     </section>
 </main>
 
-<footer class="main-footer"><div class="container"><div class="footer-grid"><div class="footer-col"><div class="footer-logo">🍫 MAMI SWEETS</div><p class="tagline">SWEETS MOMENT made luxurious</p></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="order.html">Order</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><i class="fas fa-phone"></i> +251 908 035 130</li><li><i class="fab fa-instagram"></i> @mami_sweet2</li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 MAMI SWEETS — SWEETS MOMENT made luxurious 🍫</p></div></div></footer>
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">🍫 MAMI SWEETS</div>
+                <p class="tagline">SWEETS MOMENT made luxurious</p>
+                <p>Premium Luxury Sweets<br>Addis Ababa, Ethiopia</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Opening Hours</h4>
+                <ul class="hours">
+                    <li>Monday - Saturday</li>
+                    <li><strong>9:00 AM - 9:00 PM</strong></li>
+                    <li>Sunday</li>
+                    <li><strong>10:00 AM - 7:00 PM</strong></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone"></i> +251 908 035 130</li>
+                    <li><i class="fas fa-envelope"></i> mami@sweets.com</li>
+                    <li><i class="fab fa-instagram"></i> @mami_sweet2</li>
+                    <li><i class="fab fa-tiktok"></i> @mami_sweet2</li>
+                    <li><i class="fas fa-location-dot"></i> Addis Ababa, Ethiopia</li>
+                </ul>
+                <div class="payment-badge">
+                    <span>We Accept:</span>
+                    <i class="fas fa-money-bill-wave"></i>
+                    <i class="fas fa-mobile-alt"></i>
+                    <i class="fas fa-university"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MAMI SWEETS — SWEETS MOMENT made luxurious | Premium Luxury Sweets | Addis Ababa, Ethiopia</p>
+            <p class="footer-heart">✨ Every bite is a luxurious moment ✨</p>
+        </div>
+    </div>
+</footer>
 
 <div id="toastMsg" class="toast-msg">✓ Message sent</div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="js/main.js"></script>
 <script>
-    AOS.init({ duration: 800, once: true });
+    AOS.init({ duration: 800, once: true, offset: 100 });
+    
+    // Google Map
     const map = L.map('map').setView([9.02497, 38.74689], 14);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { attribution: '© OpenStreetMap' }).addTo(map);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { 
+        attribution: '© OpenStreetMap' 
+    }).addTo(map);
     L.marker([9.02497, 38.74689]).addTo(map).bindPopup('🍫 MAMI SWEETS<br>Addis Ababa, Ethiopia');
 
+    // Contact Form Submit
     document.getElementById('sendContactBtn')?.addEventListener('click', function() {
         const name = document.getElementById('contactName')?.value.trim();
-        if (!name) { showToast('⚠️ Please enter your name'); return; }
+        const email = document.getElementById('contactEmail')?.value.trim();
+        const message = document.getElementById('contactMsg')?.value.trim();
+        
+        if (!name || !email || !message) {
+            showToast('⚠️ Please fill all fields');
+            return;
+        }
+        
+        if (!email.includes('@')) {
+            showToast('⚠️ Please enter a valid email address');
+            return;
+        }
+        
         showToast('✓ Message sent! We\'ll reply within 24 hours.');
         document.getElementById('contactName').value = '';
         document.getElementById('contactEmail').value = '';
