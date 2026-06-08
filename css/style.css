@@ -2,6 +2,7 @@
    MAMI SWEETS - COMPLETE PREMIUM STYLESHEET
    SWEETS MOMENT made luxurious | Warm Chocolate Theme
    Includes: Brighter Hero Overlays | WhatsApp Button | Gift Card | Cart | Responsive
+   Fixed: + and - buttons visible in cart
    ============================================ */
 
 :root {
@@ -947,75 +948,92 @@ body {
     color: #8B6340;
 }
 
+/* ========== FIX FOR + AND - BUTTONS IN CART - VISIBLE SYMBOLS ========== */
 .cart-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid #D4C0A8;
+    padding: 15px 0;
+    border-bottom: 1px solid #E8DCCC;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 15px;
 }
 
 .item-name {
     flex: 1;
-    min-width: 120px;
+    min-width: 140px;
+    font-size: 0.95rem;
+    font-weight: 600;
 }
 
 .cart-controls {
     display: flex;
     align-items: center;
-    gap: 8px;
-    background: #f5f5f5;
-    padding: 4px 12px;
-    border-radius: 40px;
+    gap: 10px;
+    background: #f0f0f0;
+    padding: 5px 15px;
+    border-radius: 50px;
 }
 
 .qty-btn {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     background: white;
-    border: 1px solid #ddd;
+    border: 2px solid #C47A4A;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    display: flex;
+    color: #C47A4A;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
+    font-family: monospace;
 }
 
 .qty-btn:hover {
-    background: #4CAF50;
+    background: #C47A4A;
     color: white;
-    border-color: #4CAF50;
+    border-color: #C47A4A;
+    transform: scale(1.05);
+}
+
+.qty-btn:active {
+    transform: scale(0.95);
 }
 
 .item-qty {
-    min-width: 30px;
+    min-width: 40px;
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 18px;
+    color: #3E1F0D;
 }
 
 .remove-btn {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     opacity: 0.6;
-    padding: 5px;
+    transition: all 0.2s;
+    padding: 5px 8px;
+    border-radius: 50%;
 }
 
 .remove-btn:hover {
     opacity: 1;
+    background: rgba(255, 0, 0, 0.1);
+    transform: scale(1.1);
 }
 
 .item-total-price {
-    font-weight: 600;
-    color: #4CAF50;
-    min-width: 80px;
+    font-weight: 700;
+    color: #C47A4A;
+    min-width: 90px;
     text-align: right;
+    font-size: 1rem;
 }
 
 .cart-total {
