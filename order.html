@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Order MAMI SWEETS - Premium luxury sweets delivered to your doorstep in Addis Ababa. SWEETS MOMENT made luxurious.">
+    <meta name="theme-color" content="#3E1F0D">
     <title>Order | MAMI SWEETS | SWEETS MOMENT made luxurious</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -12,10 +14,19 @@
 <body>
 
 <div class="page-transition"></div>
-<a href="https://wa.me/251908035130" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i><span class="whatsapp-tooltip">Order on WhatsApp</span></a>
 
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/251908035130?text=Hello%20MAMI%20SWEETS%2C%20I%20would%20like%20to%20place%20an%20order%20%F0%9F%8D%AB" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Order on WhatsApp</span>
+</a>
+
+<!-- Mobile Sidebar -->
 <div class="mobile-sidebar" id="mobileSidebar">
-    <div class="sidebar-header"><h3>🍫 MAMI SWEETS</h3><button class="close-sidebar" id="closeSidebarBtn"><i class="fas fa-times"></i></button></div>
+    <div class="sidebar-header">
+        <h3>🍫 MAMI SWEETS</h3>
+        <button class="close-sidebar" id="closeSidebarBtn"><i class="fas fa-times"></i></button>
+    </div>
     <div class="sidebar-nav">
         <a href="index.html"><i class="fas fa-home"></i> Home</a>
         <a href="about.html"><i class="fas fa-heart"></i> About</a>
@@ -24,14 +35,26 @@
         <a href="contact.html"><i class="fas fa-map-pin"></i> Contact</a>
     </div>
     <a href="order.html" class="sidebar-order-btn"><i class="fas fa-shopping-cart"></i> ORDER NOW</a>
-    <div class="sidebar-footer"><p><i class="fas fa-phone"></i> +251 908 035 130</p></div>
+    <div class="sidebar-footer">
+        <p><i class="fas fa-phone-alt"></i> +251 908 035 130</p>
+        <p><i class="fas fa-envelope"></i> mami@sweets.com</p>
+        <p><i class="fas fa-location-dot"></i> Addis Ababa, Ethiopia</p>
+        <p><i class="fab fa-instagram"></i> @mami_sweet2</p>
+        <p><i class="fab fa-tiktok"></i> @mami_sweet2</p>
+    </div>
 </div>
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
+<!-- Header -->
 <header class="main-header">
     <div class="container">
         <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
-        <div class="logo"><a href="index.html"><h1>🍫 MAMI SWEETS</h1><span>SWEETS MOMENT made luxurious</span></a></div>
+        <div class="logo">
+            <a href="index.html">
+                <h1>🍫 MAMI SWEETS</h1>
+                <span>SWEETS MOMENT made luxurious</span>
+            </a>
+        </div>
         <nav class="desktop-nav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -43,22 +66,38 @@
     </div>
 </header>
 
+<!-- Main Content -->
 <main>
-    <section class="hero">
-        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1549007953-2f2c0f240c02?w=1920&h=800&fit=crop');"></div>
-        <div class="hero-overlay-warm"></div>
-        <div class="container hero-content"><h1>Place Your Order</h1><p>Luxury sweets delivered to your doorstep</p></div>
+    <!-- Hero Section with YOUR Image - Brighter Overlay -->
+    <section class="hero" data-aos="fade-up">
+        <div class="hero-bg" style="background-image: url('https://raw.githubusercontent.com/Addis477/Mami-sweet/2ad40d989db79b70dbbe5d5258f4e369045bbec9/sweet-dessert-various-piece-cakes-260nw-2258142285.jpg');"></div>
+        <div class="hero-overlay-brighter"></div>
+        <div class="container hero-content">
+            <h1>Place Your Order</h1>
+            <p>Premium luxury sweets delivered to your doorstep</p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="hero-btn">Browse Menu →</a>
+            </div>
+        </div>
     </section>
 
-    <section class="shop-section">
+    <!-- Order Section -->
+    <section class="shop-section" data-aos="fade-up">
         <div class="container">
             <div class="shop-layout">
+                <!-- Cart Summary -->
                 <div class="cart-summary">
                     <h3>Your Cart <span id="cartCount">(0 items)</span></h3>
-                    <div id="cartItems" class="cart-items"><div class="empty-cart">🛒 Your cart is empty</div></div>
-                    <div class="cart-total"><strong>Total:</strong> <strong id="cartTotal">ETB 0</strong></div>
+                    <div id="cartItems" class="cart-items">
+                        <div class="empty-cart">🛒 Your cart is empty</div>
+                    </div>
+                    <div class="cart-total">
+                        <strong>Total:</strong> <strong id="cartTotal">ETB 0</strong>
+                    </div>
                     <div class="delivery-note">🚚 Free delivery on orders over ETB 1,500</div>
                 </div>
+
+                <!-- Checkout Form -->
                 <div class="checkout-form">
                     <h3>Delivery Details</h3>
                     <input type="text" id="orderName" placeholder="Full Name" required>
@@ -66,35 +105,134 @@
                     <input type="email" id="orderEmail" placeholder="Email Address">
                     <input type="text" id="orderAddress" placeholder="Delivery Address" required>
                     <div class="form-row-small">
-                        <select id="orderDate"><option>Today</option><option>Tomorrow</option><option>In 2 days</option></select>
-                        <select id="orderTime"><option>Morning (9am-12pm)</option><option>Afternoon (12pm-4pm)</option><option>Evening (4pm-7pm)</option></select>
+                        <select id="orderDate">
+                            <option>Today</option>
+                            <option>Tomorrow</option>
+                            <option>In 2 days</option>
+                        </select>
+                        <select id="orderTime">
+                            <option>Morning (9am-12pm)</option>
+                            <option>Afternoon (12pm-4pm)</option>
+                            <option>Evening (4pm-7pm)</option>
+                        </select>
                     </div>
                     <textarea rows="2" id="specialInstructions" placeholder="Special instructions (gift wrap, message, etc.)"></textarea>
                     <button id="checkoutBtn">Place Order</button>
                 </div>
             </div>
 
-            <h3 class="section-title-small">Add Items</h3>
+            <!-- Products to Add -->
+            <h3 class="section-title-small">Add Items to Cart</h3>
             <div class="items-grid">
-                <div class="shop-item" data-name="Belgian Chocolate Box" data-price="550"><span>🍫 Belgian Chocolate Box</span><span>ETB 550</span><button class="add-to-cart-btn">+ Add</button></div>
-                <div class="shop-item" data-name="Dark Chocolate Truffles" data-price="480"><span>🍫 Dark Chocolate Truffles</span><span>ETB 480</span><button class="add-to-cart-btn">+ Add</button></div>
-                <div class="shop-item" data-name="French Macarons" data-price="420"><span>🍬 French Macarons</span><span>ETB 420</span><button class="add-to-cart-btn">+ Add</button></div>
-                <div class="shop-item" data-name="Luxury Gift Box" data-price="850"><span>🎁 Luxury Gift Box</span><span>ETB 850</span><button class="add-to-cart-btn">+ Add</button></div>
-                <div class="shop-item" data-name="Gourmet Candy Bundle" data-price="320"><span>🍬 Gourmet Candy Bundle</span><span>ETB 320</span><button class="add-to-cart-btn">+ Add</button></div>
-                <div class="shop-item" data-name="Romantic Gift Set" data-price="650"><span>💝 Romantic Gift Set</span><span>ETB 650</span><button class="add-to-cart-btn">+ Add</button></div>
-                <div class="shop-item" data-name="Artisan Chocolate Bar" data-price="250"><span>🍫 Artisan Chocolate Bar</span><span>ETB 250</span><button class="add-to-cart-btn">+ Add</button></div>
-                <div class="shop-item" data-name="Celebration Hamper" data-price="1200"><span>🎁 Celebration Hamper</span><span>ETB 1200</span><button class="add-to-cart-btn">+ Add</button></div>
+                <div class="shop-item" data-name="Belgian Chocolate Box" data-price="550">
+                    <span>🍫 Belgian Chocolate Box</span>
+                    <span>ETB 550</span>
+                    <button class="add-to-cart-btn">+ Add</button>
+                </div>
+                <div class="shop-item" data-name="Dark Chocolate Truffles" data-price="480">
+                    <span>🍫 Dark Chocolate Truffles</span>
+                    <span>ETB 480</span>
+                    <button class="add-to-cart-btn">+ Add</button>
+                </div>
+                <div class="shop-item" data-name="French Macarons" data-price="420">
+                    <span>🍬 French Macarons</span>
+                    <span>ETB 420</span>
+                    <button class="add-to-cart-btn">+ Add</button>
+                </div>
+                <div class="shop-item" data-name="Luxury Gift Box" data-price="850">
+                    <span>🎁 Luxury Gift Box</span>
+                    <span>ETB 850</span>
+                    <button class="add-to-cart-btn">+ Add</button>
+                </div>
+                <div class="shop-item" data-name="Gourmet Candy Bundle" data-price="320">
+                    <span>🍬 Gourmet Candy Bundle</span>
+                    <span>ETB 320</span>
+                    <button class="add-to-cart-btn">+ Add</button>
+                </div>
+                <div class="shop-item" data-name="Celebration Hamper" data-price="1200">
+                    <span>🎁 Celebration Hamper</span>
+                    <span>ETB 1200</span>
+                    <button class="add-to-cart-btn">+ Add</button>
+                </div>
+                <div class="shop-item" data-name="Chocolate Covered Strawberries" data-price="350">
+                    <span>🍓 Chocolate Covered Strawberries</span>
+                    <span>ETB 350</span>
+                    <button class="add-to-cart-btn">+ Add</button>
+                </div>
+                <div class="shop-item" data-name="Milk Chocolate Bar" data-price="220">
+                    <span>🍫 Milk Chocolate Bar</span>
+                    <span>ETB 220</span>
+                    <button class="add-to-cart-btn">+ Add</button>
+                </div>
             </div>
         </div>
     </section>
 </main>
 
-<footer class="main-footer"><div class="container"><div class="footer-grid"><div class="footer-col"><div class="footer-logo">🍫 MAMI SWEETS</div><p class="tagline">SWEETS MOMENT made luxurious</p></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="order.html">Order</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><i class="fas fa-phone"></i> +251 908 035 130</li><li><i class="fab fa-instagram"></i> @mami_sweet2</li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 MAMI SWEETS — SWEETS MOMENT made luxurious 🍫</p></div></div></footer>
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">🍫 MAMI SWEETS</div>
+                <p class="tagline">SWEETS MOMENT made luxurious</p>
+                <p>Premium Luxury Sweets<br>Addis Ababa, Ethiopia</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Opening Hours</h4>
+                <ul class="hours">
+                    <li>Monday - Saturday</li>
+                    <li><strong>9:00 AM - 9:00 PM</strong></li>
+                    <li>Sunday</li>
+                    <li><strong>10:00 AM - 7:00 PM</strong></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone"></i> +251 908 035 130</li>
+                    <li><i class="fas fa-envelope"></i> mami@sweets.com</li>
+                    <li><i class="fab fa-instagram"></i> @mami_sweet2</li>
+                    <li><i class="fab fa-tiktok"></i> @mami_sweet2</li>
+                    <li><i class="fas fa-location-dot"></i> Addis Ababa, Ethiopia</li>
+                </ul>
+                <div class="payment-badge">
+                    <span>We Accept:</span>
+                    <i class="fas fa-money-bill-wave"></i>
+                    <i class="fas fa-mobile-alt"></i>
+                    <i class="fas fa-university"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MAMI SWEETS — SWEETS MOMENT made luxurious | Premium Luxury Sweets | Addis Ababa, Ethiopia</p>
+            <p class="footer-heart">✨ Every bite is a luxurious moment ✨</p>
+        </div>
+    </div>
+</footer>
 
 <div id="toastMsg" class="toast-msg">✓ Added to cart</div>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="js/main.js"></script>
 <script>
+    AOS.init({ duration: 800, once: true, offset: 100 });
+    
     let cart = [];
     const FREE_DELIVERY = 1500;
 
@@ -120,13 +258,27 @@
         if (countSpan) countSpan.textContent = `(${cart.reduce((s, i) => s + i.qty, 0)} items)`;
         const deliveryNote = document.querySelector('.delivery-note');
         if (deliveryNote) {
-            if (total >= FREE_DELIVERY) { deliveryNote.innerHTML = '✅ Free delivery applied!'; deliveryNote.style.color = '#4CAF50'; }
-            else { deliveryNote.innerHTML = `🚚 Add ETB ${FREE_DELIVERY - total} more for free delivery`; deliveryNote.style.color = '#8B6B4A'; }
+            if (total >= FREE_DELIVERY) { 
+                deliveryNote.innerHTML = '✅ Free delivery applied!'; 
+                deliveryNote.style.color = '#4CAF50'; 
+            } else { 
+                deliveryNote.innerHTML = `🚚 Add ETB ${FREE_DELIVERY - total} more for free delivery`; 
+                deliveryNote.style.color = '#8B6340'; 
+            }
         }
     }
 
-    window.changeQty = function(idx, delta) { const newQty = cart[idx].qty + delta; if (newQty <= 0) cart.splice(idx, 1); else cart[idx].qty = newQty; updateCart(); };
-    window.removeItem = function(idx) { cart.splice(idx, 1); updateCart(); };
+    window.changeQty = function(idx, delta) { 
+        const newQty = cart[idx].qty + delta; 
+        if (newQty <= 0) cart.splice(idx, 1); 
+        else cart[idx].qty = newQty; 
+        updateCart(); 
+    };
+
+    window.removeItem = function(idx) { 
+        cart.splice(idx, 1); 
+        updateCart(); 
+    };
 
     document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
         btn.addEventListener('click', function() {
@@ -145,8 +297,14 @@
         const name = document.getElementById('orderName')?.value.trim();
         const phone = document.getElementById('orderPhone')?.value.trim();
         const address = document.getElementById('orderAddress')?.value.trim();
-        if (!name || !phone || !address) { showToast('⚠️ Please fill all fields'); return; }
-        if (cart.length === 0) { showToast('⚠️ Your cart is empty'); return; }
+        if (!name || !phone || !address) { 
+            showToast('⚠️ Please fill all fields'); 
+            return; 
+        }
+        if (cart.length === 0) { 
+            showToast('⚠️ Your cart is empty'); 
+            return; 
+        }
         const total = cart.reduce((s, i) => s + (i.price * i.qty), 0);
         showToast(`✅ Thanks ${name}! Your order (ETB ${total}) has been placed.`);
         cart = [];
@@ -157,6 +315,7 @@
         document.getElementById('orderAddress').value = '';
         document.getElementById('specialInstructions').value = '';
     });
+    
     updateCart();
 </script>
 </body>
